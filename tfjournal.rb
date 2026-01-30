@@ -5,21 +5,21 @@
 class Tfjournal < Formula
   desc "Record Terraform runs with git context, timing, and resource events"
   homepage "https://github.com/Owloops/tfjournal"
-  version "0.1.3"
+  version "0.1.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Owloops/tfjournal/releases/download/v0.1.3/tfjournal_Darwin_x86_64"
-      sha256 "8a868baca1bf72870d0ddd4c35ddcbe4e128f7ad38384a05659159386d9894ab"
+      url "https://github.com/Owloops/tfjournal/releases/download/v0.1.4/tfjournal_Darwin_x86_64"
+      sha256 "fc705d714348b4e6b5282aa72ce09fdc71db49372fa92ad28a5e7ee0cc881abf"
 
       def install
         bin.install "tfjournal_Darwin_x86_64" => "tfjournal"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Owloops/tfjournal/releases/download/v0.1.3/tfjournal_Darwin_arm64"
-      sha256 "0ee330980664ee70cbc817499f9f0c722f3a44675864cee7f48dacb492c74bbd"
+      url "https://github.com/Owloops/tfjournal/releases/download/v0.1.4/tfjournal_Darwin_arm64"
+      sha256 "64135d8d8d7beec88b511871581de70335680faebe67ef762cc56f040fed1083"
 
       def install
         bin.install "tfjournal_Darwin_arm64" => "tfjournal"
@@ -29,15 +29,15 @@ class Tfjournal < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Owloops/tfjournal/releases/download/v0.1.3/tfjournal_Linux_x86_64"
-      sha256 "33ba6a9a142b902415d7c547eefa32fcb1614b9c5a76b354d7201f2526b87cc9"
+      url "https://github.com/Owloops/tfjournal/releases/download/v0.1.4/tfjournal_Linux_x86_64"
+      sha256 "4bc4199bc0dc10b4477d6ed8aaf531714d8842ce19d00363bbf7d15e0a4a4426"
       def install
         bin.install "tfjournal_Linux_x86_64" => "tfjournal"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Owloops/tfjournal/releases/download/v0.1.3/tfjournal_Linux_arm64"
-      sha256 "49d81874dcd2cfa7f3487cbf488ff718f5430ec34bffbefac50dea91e264cca6"
+      url "https://github.com/Owloops/tfjournal/releases/download/v0.1.4/tfjournal_Linux_arm64"
+      sha256 "5f12e601d966e5af3b7ef5997199e4285f6821eeb6d653ab135d086804ad357d"
       def install
         bin.install "tfjournal_Linux_arm64" => "tfjournal"
       end
