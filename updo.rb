@@ -5,21 +5,21 @@
 class Updo < Formula
   desc "Uptime monitoring CLI tool with alerting and advanced settings"
   homepage "https://github.com/Owloops/updo"
-  version "0.5.0"
+  version "0.5.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Owloops/updo/releases/download/v0.5.0/updo_Darwin_x86_64"
-      sha256 "fdbad41c51ee214155419174dd39c5909b6380bf45a7b3d6dd0d089961fc07c5"
+      url "https://github.com/Owloops/updo/releases/download/v0.5.1/updo_Darwin_x86_64"
+      sha256 "904d65e223f158d98c494fa1a2efb5568affe0d07ad3dbfde16abd76b7d8d50e"
 
       define_method(:install) do
         bin.install "updo_Darwin_x86_64" => "updo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Owloops/updo/releases/download/v0.5.0/updo_Darwin_arm64"
-      sha256 "1bbd094907a626c6b32f314bbb91c278395058380b1e78f5c7ad2d4c63c2aff4"
+      url "https://github.com/Owloops/updo/releases/download/v0.5.1/updo_Darwin_arm64"
+      sha256 "d345db01a8854f8375c12e15a928fd4d3434b1245646ce07b9849fbbacdb0d19"
 
       define_method(:install) do
         bin.install "updo_Darwin_arm64" => "updo"
@@ -29,15 +29,15 @@ class Updo < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Owloops/updo/releases/download/v0.5.0/updo_Linux_x86_64"
-      sha256 "59dadad1533418adc982d97f86d81ae111c13f85bb5aa2cd0df6cb9a826a1482"
+      url "https://github.com/Owloops/updo/releases/download/v0.5.1/updo_Linux_x86_64"
+      sha256 "9359652bb838eeeabbdebb67d4eb5a572d3b335f573db0001c18e3791ddac1b7"
       define_method(:install) do
         bin.install "updo_Linux_x86_64" => "updo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Owloops/updo/releases/download/v0.5.0/updo_Linux_arm64"
-      sha256 "a5cbb884bfb0368d7a6b114668ab196793972420095c303e46fb150f15db4fd1"
+      url "https://github.com/Owloops/updo/releases/download/v0.5.1/updo_Linux_arm64"
+      sha256 "5f602fcad951c9d2de058173d1748ffc21cc7a4042a0234dcdde9e08e5643739"
       define_method(:install) do
         bin.install "updo_Linux_arm64" => "updo"
       end
